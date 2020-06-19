@@ -38,4 +38,9 @@ Route::prefix('admin')->namespace('Admin')->group(function() {
             Route::post('/store', 'RecadoController@store')->name('store');
 
         });
+
+        Route::prefix('questoes')->name('questoes.')->group(function() {
+            Route::get('/create', 'QuestaoController@create')->name('create');
+            Route::post('/store', 'QuestaoController@store')->name('store');
+        });
 });
